@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "391d9ab9-b3c6-4ba1-afdb-b70730220674",
+		"name": "EventBrite",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"email@email.com\",\r\n    \"password\": \"12345\",\r\n    \"name\":\"maria\",\r\n    \"lastName\":\"ang\",\r\n    \"creator\":\"false\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/eventmanager/api/v1/create-user",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eventmanager",
+						"api",
+						"v1",
+						"create-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createUserCreator",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"email2@email.com\",\r\n    \"password\": \"12345\",\r\n    \"name\":\"maria\",\r\n    \"lastName\":\"ang\",\r\n    \"creator\":\"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/eventmanager/api/v1/create-user",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eventmanager",
+						"api",
+						"v1",
+						"create-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createEvent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"tittle\":\"beautiful life\",\r\n    \"date\":\"2022-07-10\",\r\n    \"time\":\"09:00\",\r\n    \"description\": \"conference\",\r\n    \"durationHours\": \"3\",\r\n    \"modality\": \"online\",\r\n    \"address\":\"www.beautifullife.com\",\r\n        \"tickets\":[\r\n            {\r\n            \"price\":\"0.0\",\r\n            \"totalTicket\":\"200\",\r\n            \"ticketAble\":\"200\"\r\n            },\r\n            {\r\n            \"price\":\"0.0\",\r\n            \"totalTicket\":\"200\",\r\n            \"ticketAble\":\"200\"\r\n            }\r\n        ]\r\n\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/eventmanager/api/v1/create-event/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eventmanager",
+						"api",
+						"v1",
+						"create-event",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buyTicket",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idEvent\":\"1\",\r\n    \"idUser\":\"1\",\r\n    \"totalPrice\":0.0,\r\n    \"ticketsIds\":[1,2,1]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/eventmanager/api/v1/buy-ticket",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eventmanager",
+						"api",
+						"v1",
+						"buy-ticket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllEvents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/eventmanager/api/v1/event",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eventmanager",
+						"api",
+						"v1",
+						"event"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EventId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/eventmanager/api/v1/event/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eventmanager",
+						"api",
+						"v1",
+						"event",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserId",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
